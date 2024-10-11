@@ -18,6 +18,7 @@ public class Sorting {
 
             for (int i = 0; i < size; i++) 
             {
+                steps++;
                 for (int j = 0; j < size - i - 1; j++) 
                 {
                     steps++;
