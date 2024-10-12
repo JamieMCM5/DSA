@@ -1,6 +1,6 @@
 //Learning to combine sorting and searching algorithms
 
-public class sortAndSearch 
+public class bubbleSortAndSearch 
 {
     public static void main(String[] args) 
     {
