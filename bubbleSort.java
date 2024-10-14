@@ -1,4 +1,4 @@
-public class Sorting {
+public class bubbleSort {
     public static void main(String[] args) 
     {
         //Bubble sort, not efficient but simple
