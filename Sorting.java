@@ -4,7 +4,7 @@ public class Sorting {
         //Bubble sort, not efficient but simple
 
         //Declare and initialize variables
-        int[] nums = {8,6,9,2,4,5,7,3,8,10,0,1,5,2};
+        int[] nums = {10,9,8,7,6,5,4,3,2,1};
         int size = nums.length;
         int temp = 0;
         int steps = 0;
@@ -26,6 +26,7 @@ public class Sorting {
                     if(nums[j] > nums[j+1])
                     {
                         //Swap the values of nums[j] and nums[j+1]
+                        steps++;
                         temp = nums[j];
                         nums[j] = nums[j+1];
                         nums[j+1] = temp;
