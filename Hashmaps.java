@@ -57,18 +57,23 @@ public class Hashmaps {
     }
 
     public static int uniqueChar(String s){
+        //Declare the hashmap of type char, int to store the value at the current index, s.charAt[i] and
+        //the amount of times that value appears.
         HashMap<Character, Integer> map = new HashMap<>();
         int n = s.length();
+        //Iterate over the string and add the char at index[i] to the map
         for (int i = 0; i < n; i++) {
             char c = s.charAt(i);
             map.merge(c, 1, Integer :: sum);
         }
-
+        //Iterate over the string again and check if the count of index[i] is 1, if so
+        //return i
         for (int i = 0; i < n; i++) {
             if (map.get(s.charAt(i)) == 1) {
                 return i;
             }
         }
+        //If not, return -1 
         return -1;
     }
     
