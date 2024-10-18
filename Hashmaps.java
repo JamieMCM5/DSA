@@ -7,13 +7,13 @@ public class Hashmaps {
 
     public static void main(String[] args) {
         int[] numbers = {1,1,2,4,5,6};
-        //twoSum
+        //Code to test the twoSum method.
         int target = 2;
         System.out.println("Two Sum answer is: " + Arrays.toString(twoSum(numbers, target)));
-        //Occurrences
-        HashMap<Integer, Integer> occurrences = countOccurences(numbers);
+        //Code to test the countOccurrences method.
+        HashMap<Integer, Integer> occurrences = countOccurrences(numbers);
         System.out.println(occurrences);
-        //UniqueChar
+        //Code to test the uniqueChar method.
         String s = "aabbccdde";
         System.out.println(uniqueChar(s));
     }
@@ -41,7 +41,7 @@ public class Hashmaps {
         return new int[]{};
     }
 
-    public static HashMap<Integer, Integer> countOccurences(int[] nums){
+    public static HashMap<Integer, Integer> countOccurrences(int[] nums){
         //Declare the hashmap of type int, int to store the value at the current index, nums[i], and
         //the count of said value.
         HashMap<Integer, Integer> map = new HashMap<>();
