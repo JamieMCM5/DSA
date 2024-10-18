@@ -27,8 +27,7 @@ public class Hashmaps {
         //Iterate over nums and check if the hashmap contains the key of complement.
         for (int i = 0; i < n; i++) {
             complement = target - nums[i];
-            if (map.containsKey(complement)) 
-            {
+            if (map.containsKey(complement)) {
                     //If so, return the current index, and the value of complement
                     //(Which is the index at which it was found).
                     return new int[]{map.get(complement), i};
