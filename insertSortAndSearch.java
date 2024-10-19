@@ -6,7 +6,7 @@ public class insertSortAndSearch {
         int wantedNum = 64;
 
         int[] newArr = insertionSort(arr);
-        int result = binSearch(newArr, wantedNum, 0, arr.length);
+        int result = binarySearch(newArr, wantedNum, 0, arr.length);
 
         System.out.println("The sorted array is " + Arrays.toString(newArr));
         System.out.println("The index of " + wantedNum + " is " + result);
@@ -26,7 +26,7 @@ public class insertSortAndSearch {
 
             //While the value of index j is greater than the key
             while (j>=0 && arr[j] > key) {
-                
+
                 //Shift the value of arr[j] to the next index
                 arr[j+1] = arr[j];
                 j--;
@@ -37,19 +37,28 @@ public class insertSortAndSearch {
         return arr;
     }
 
-    public static int binSearch(int[] arr, int target, int left, int right){
-        while (left <= right) {
-            int middle = (left + right)/2;
-            if (target == arr[middle]) {
-                return middle;
-            }
-            else if(target < arr[middle]){
-                return binSearch(arr, target, left, middle - 1);
-            }
-            else{
-                return binSearch(arr, target, middle + 1, right);
-            }
+    public static int binarySearch(int[] nums, int target, int startPoint, int endPoint) {
+        
+        //Code runs while we have 2 points in the array
+        while (startPoint <= endPoint) {
+            
+            //Stores midpoint as startPoint + endPoint / 2, finding the middle of the array
+            int midPoint = (startPoint + endPoint)/2;
+
+            //If target value is found, return it 
+            if (nums[midPoint] == target) 
+                return midPoint;
+
+            /*If target value is less than the value at the mid point, run the method again
+              but change the end point to the mid point, halving the array*/
+            //This makes the method recursive
+            else if (target < nums[midPoint])
+                return binarySearch(nums, target, startPoint, midPoint -1);
+            //As above, vice versa
+            else
+                return binarySearch(nums, target, midPoint+1, endPoint);
         }
+        //If target value is not found, return -1
         return -1;
     }
 }
