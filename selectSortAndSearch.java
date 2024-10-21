@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * selectSortAndSearch
  */
@@ -20,6 +22,9 @@ public class selectSortAndSearch {
         {
             System.out.println("Element " + target + " not found");
         }
+
+        System.out.println(Arrays.toString(SortMergeAndSearch.processArrays(nums, newnums, result)));
+
     }
 
     public static int binarySearch(int[] arr, int target, int left, int right)
