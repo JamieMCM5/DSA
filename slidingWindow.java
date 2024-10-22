@@ -7,16 +7,11 @@ import java.util.HashMap;
 public class slidingWindow {
 
     public static void main(String[] args) {
-        // Input string and the maximum number of distinct characters allowed
+        
         String s = "aaauuuissssooaaaaaaaaaaaaaalllsmkkkajm";
         int k = 2;
 
-        // Call the method to find the length of the longest substring with at most k distinct characters
-        System.out.println("Length of the longest substring with at most " + k + " distinct characters: " + longestSubstringWithKDistinct(s, k));
-
-        /*
-         ***********************************************************************************************************************************************************************************************
-         */
+        System.out.println("Length of the longest substring with at most " + k + " distinct characters: " + longestDistinct(s, k));
 
          int[] arr = {0,1,6,13,2,8,4};
          int l = 3;
@@ -56,7 +51,7 @@ public class slidingWindow {
     
     
     // Method to find the length of the longest substring with at most k distinct characters
-    public static int longestSubstringWithKDistinct(String s, int k) {
+    public static int longestDistinct(String s, int k) {
         // If the string is empty or k is zero, return 0
         if (s.length() == 0 || k == 0) return 0;
 
